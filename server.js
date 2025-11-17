@@ -15,7 +15,15 @@ const app = express();
 const stripe = new Stripe(process.env.STRIPE_SECRET_KEY);
 
 // Middleware
-app.use(cors());
+// app.use(cors());
+// Example for Express backend
+const cors = require('cors');
+app.use(cors({
+    origin: 'https://vercel.com/arjuns-projects-445944b2/communityhubb', // Replace with your Vercel URL
+    methods: ['GET', 'POST', 'PUT', 'DELETE'],
+    credentials: true
+}));
+
 app.use(express.json());
 
 // Database Connection
