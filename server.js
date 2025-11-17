@@ -18,7 +18,7 @@ const stripe = new Stripe(process.env.STRIPE_SECRET_KEY);
 // app.use(cors());
 // Example for Express backend
 app.use(cors({
-    origin: 'https://vercel.com/arjuns-projects-445944b2/communityhubb', // Replace with your Vercel URL
+    origin: 'https://communityhubb.vercel.app', // Replace with your Vercel URL
     methods: ['GET', 'POST', 'PUT', 'DELETE'],
     credentials: true
 }));
